@@ -1,0 +1,32 @@
+# CareX — local stack (stub; services are filled in as the app is built)
+# One command for learners: docker compose up
+services:
+  web:
+    build: ./apps/web
+    ports: ["5173:5173"]
+    environment:
+      - API_URL=http://api:4000
+    depends_on: [api]
+
+  api:
+    build: ./apps/api
+    ports: ["4000:4000"]
+    environment:
+      - DATABASE_URL=postgres://carex:carex@db:5432/carex
+      - CHAOS_DEFAULT=off
+    depends_on: [db]
+
+  payment-sandbox:
+    # second origin for the nested payment -> 3-D Secure iframes
+    build: ./apps/payment-sandbox
+    ports: ["5174:5174"]
+
+  db:
+    image: postgres:16
+    environment:
+      - POSTGRES_USER=carex
+      - POSTGRES_PASSWORD=carex
+      - POSTGRES_DB=carex
+    ports: ["5432:5432"]
+    volumes:
+      - ./db/seed:/docker-entrypoint-initdb.d:ro
