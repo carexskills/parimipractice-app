@@ -1,9 +1,9 @@
-# CareX — practice app spec (Codex-first Playwright course)
+# ParimiPractice — practice app spec (Codex-first Playwright course)
 
 Draft spec · Nov 1, 2026
 
 ## What it is
-CareX is a fictional US healthcare platform for a network of clinics and hospitals, built to production-grade delivery standards:
+ParimiPractice is a fictional US healthcare platform for a network of clinics and hospitals, built to production-grade delivery standards:
 - **Patient portal**: find care (clinic search), book visits, telehealth, lab results, health summary, secure messages, copay billing, documents, intake and consent.
 - **Provider portal** (doctors, nurses, care coordinators): live waiting room, schedule, schedule board, charting with a streaming visit-summary assistant, lab orders, e-prescribing.
 - **Admin console**: clinics and staff, patient directory, claims, audit log.
@@ -12,14 +12,14 @@ It is deliberately difficult: every hard real-world Playwright problem testers a
 Look and feel: calm, corporate healthcare UI (white/navy with one accent), desktop first at 1280×800. Real build stack: React + Lit web components, Node API, WebSocket gateway, payment sandbox on a second origin, mailbox service, Postgres; one `docker compose up`.
 
 ## Naming, legal and data rules (must ship with the app)
-- Name "CareX" is Ramya's choice. A quick search (Nov 1) found existing healthcare brands with the same name: Carex® home health care products (Carex Health Brands, carex.com), CareX AI (Crunchbase), CareX apps on the app stores. Run a trademark search (USPTO + target markets) and get legal advice before publishing; a distinct variant may be safer. Not legal advice; no trademark search was run.
-- Footer and login disclaimer: "CareX is a fictional training application. All people, clinics and records are made up. Not medical software. Not HIPAA-certified. Not affiliated with any healthcare provider."
+- Name "ParimiPractice" is Ramya's choice (renamed from the working name on Nov 1 2026). Run a trademark search (USPTO + target markets) before publishing widely. Not legal advice; no trademark search was run.
+- Footer and login disclaimer: "ParimiPractice is a fictional training application. Not a real medical service. All people, clinics and records are made up. Not medical software. Not HIPAA-certified. Not affiliated with any healthcare provider."
 - Fictional data only. No real PHI, no real doctor or clinic names. Do not copy Crossover Health's (or anyone's) name, logo, colours, copy or layouts.
 
 ## Priorities: features ranked by real tester pain
 Evidence: top 25 Stack Overflow [playwright] questions by views (Stack Exchange API, Nov 1, 2026), most-upvoted Playwright GitHub issues, and the top-5 course review gaps. Build in this order.
 
-| Rank | Feature in CareX | Where | Pain evidence | Lessons |
+| Rank | Feature in ParimiPractice | Where | Pain evidence | Lessons |
 |---|---|---|---|---|
 | 1 | Late/async UI: "Confirm booking" enables after 1–4 s; skeletons on lab results; slow insurance-eligibility check; filtered clinic search | Patient: Book visit, Lab results | SO #1, #2, #3, #6: 545,638 views | L11, L10, L13, L28 |
 | 2 | Animations and interruptions: drawers, toasts, flu-shot campaign modal (~30% of loads), privacy-notice banner, click-blocking overlay | All portals | SO #4, #12, #18: 190,298 views | L12 |
@@ -74,4 +74,3 @@ Repo-level pains (config/.env SO #8, #25; Docker/CI SO #19) are taught in the te
 - Stack Overflow: Stack Exchange API, Nov 1 2026 (question links in the PDF, section 1).
 - Playwright GitHub issues: github.com/microsoft/playwright/issues/6347, /4488, /11164, /8622.
 - Playwright docs: playwright.dev/docs/locators (closed shadow roots not supported), /clock, /api/class-websocketroute.
-- Naming search: carex.com; crunchbase.com/organization/carex-ai; play.google.com (CareX app) — search results, Nov 1 2026.

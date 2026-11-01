@@ -1,12 +1,12 @@
-# CareX — practice application
+# ParimiPractice — practice application
 
-CareX is a **fictional US healthcare platform** (patient portal, provider portal, admin console for a network of clinics and hospitals) built as the practice application for every carexskills Playwright course.
+ParimiPractice is a **fictional US healthcare platform** (patient portal, provider portal, admin console for a network of clinics and hospitals) built as the practice application for every carexskills Playwright course.
 
 It is deliberately hard to test. Each real-world problem testers hit with Playwright is built in on purpose, and a **Chaos panel** switches those problems on and off so every lesson is repeatable.
 
 ## How the courses use this repo
-- Every course's tests run against CareX. Learners never edit this repo; they test it.
-- Lessons pin a CareX release tag (for example `carex-v1.0.0`), so a recorded lesson keeps working after the app evolves.
+- Every course's tests run against ParimiPractice. Learners never edit this repo; they test it.
+- Lessons pin a ParimiPractice release tag (for example `parimipractice-v1.0.0`), so a recorded lesson keeps working after the app evolves.
 - The same app is reused by all future carexskills courses (UI, API, accessibility, visual, performance).
 
 ## Portals
@@ -47,10 +47,10 @@ docker compose up
 - `data-testid` only where roles and labels can't work (sparse on purpose)
 
 ## Legal
-CareX is a fictional training application. All people, clinics and records are made up. Not medical software. Not HIPAA-certified. Not affiliated with any healthcare provider. No real patient data may ever be added to this repo.
+ParimiPractice is a fictional training application. Not a real medical service. All people, clinics and records are made up. Not medical software. Not HIPAA-certified. Not affiliated with any healthcare provider. No real patient data may ever be added to this repo.
 
 ---
-**CareX is a fictional training application** built for carexskills courses. All people, clinics and records are made up; it is not medical software and not affiliated with any healthcare provider.
+**ParimiPractice is a fictional training application. Not a real medical service.** Built for carexskills courses. All people, clinics and records are made up; it is not medical software and not affiliated with any healthcare provider.
 
 ---
 © 2026 carexskills. All rights reserved. Private repository, not for redistribution. See [LICENSE](LICENSE).
